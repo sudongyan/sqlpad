@@ -56,15 +56,12 @@ class ConfigurationView extends React.Component {
       <div>
         <Col sm={6} smOffset={1}>
           <div className="configBox">
-            <h1 style={{ textAlign: 'center' }}>Configuration</h1>
+            <h1 style={{ textAlign: 'center' }}>设置</h1>
             <hr />
             <Form horizontal>{configItemInputNodes}</Form>
             <hr />
             <p>
-              Some configuration is only accessible via environment variables or
-              command-line-interface (CLI) flags. Below are the current values
-              for these variables. Sensitive values are masked. Hover over input
-              for additional information.
+              有些配置只能通过环境变量或命令行界面(CLI)设置。下面是这些变量的当前值。敏感信息已遮避。将鼠标悬停在输入框上可查看更具体的信息。
             </p>
             <hr />
             <ConfigEnvDocumentation configItems={this.state.configItems} />
@@ -75,9 +72,9 @@ class ConfigurationView extends React.Component {
             <div className="panel panel-default">
               <div className="panel-body">
                 <p>
-                  <strong>Feature Checklist</strong>
+                  <strong>功能清单</strong>
                 </p>
-                <p>Unlock features by providing the required configuration.</p>
+                <p>提供相应的配置后可使用这些功能</p>
                 <hr />
                 <strong>Email</strong>
                 <ul style={{ paddingLeft: 20 }}>

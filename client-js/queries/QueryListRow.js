@@ -46,10 +46,10 @@ class QueryListRow extends React.Component {
         </p>
         <p>
           <a href={tableUrl} target="_blank" rel="noopener noreferrer">
-            table
+            表格
           </a>{' '}
           <a href={chartUrl} target="_blank" rel="noopener noreferrer">
-            chart
+            图表
           </a>
         </p>
         <DeleteButton onClick={this.handleDeleteClick} />

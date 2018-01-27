@@ -25,7 +25,7 @@ class QueryPreview extends React.Component {
       }
       return (
         <div className="pa2 w-40 flex flex-column">
-          <ControlLabel>Preview</ControlLabel>
+          <ControlLabel>SQL 预览</ControlLabel>
           <span className="f2">{selectedQuery.name}</span>
           <SqlEditor config={config} readOnly value={selectedQuery.queryText} />
           {chartTypeLabel()}

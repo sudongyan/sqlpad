@@ -12,7 +12,7 @@ class UsersView extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'SQLPad - Users'
+    document.title = 'SQLPad - 用户'
     this.loadUsersFromServer()
   }
 
@@ -21,7 +21,7 @@ class UsersView extends React.Component {
       if (json.error) {
         return Alert.error('Delete Failed: ' + json.error.toString())
       }
-      Alert.success('User Deleted')
+      Alert.success('删除成功')
       this.loadUsersFromServer()
     })
   }
@@ -41,9 +41,9 @@ class UsersView extends React.Component {
       this.loadUsersFromServer()
       this.setState({ isSaving: false })
       if (json.error) {
-        return Alert.error('Update failed: ' + json.error.toString())
+        return Alert.error('更新失败: ' + json.error.toString())
       }
-      Alert.success('User Updated')
+      Alert.success('更新成功')
     })
   }
 
@@ -56,9 +56,9 @@ class UsersView extends React.Component {
       this.loadUsersFromServer()
       this.setState({ isSaving: false })
       if (json.error) {
-        return Alert.error('Update failed: ' + json.error.toString())
+        return Alert.error('更新失败: ' + json.error.toString())
       }
-      Alert.success('Password link generated')
+      Alert.success('密码链接获取成功')
     })
   }
 
@@ -70,9 +70,9 @@ class UsersView extends React.Component {
       this.loadUsersFromServer()
       this.setState({ isSaving: false })
       if (json.error) {
-        return Alert.error('Update failed: ' + json.error.toString())
+        return Alert.error('更新失败: ' + json.error.toString())
       }
-      Alert.success('Password reset link removed')
+      Alert.success('重设密码的链接删除成功')
     })
   }
 

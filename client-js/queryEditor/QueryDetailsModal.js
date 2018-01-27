@@ -83,7 +83,7 @@ class QueryDetailsModal extends React.Component {
         <Modal.Body>
           <form onSubmit={this.onSubmit}>
             <FormGroup>
-              <ControlLabel>Query Tags</ControlLabel>
+              <ControlLabel>添加标签</ControlLabel>
               <Creatable
                 multi
                 name="query-tags-field"
@@ -96,24 +96,24 @@ class QueryDetailsModal extends React.Component {
           </form>
           <hr />
           <p>
-            <strong>Shortcuts</strong>
+            <strong>快捷方式</strong>
           </p>
           <ul style={{ paddingLeft: 0 }}>
             <li style={{ listStyleType: 'none', marginBottom: 8 }}>
-              <code>ctrl+s</code> / <code>command+s</code> : Save
+              <code>ctrl+s</code> / <code>command+s</code> : 保存
             </li>
             <li style={{ listStyleType: 'none', marginBottom: 8 }}>
-              <code>ctrl+return</code> / <code>command+return</code> : Run
+              <code>ctrl+return</code> / <code>command+return</code> : 运行
             </li>
             <li style={{ listStyleType: 'none', marginBottom: 8 }}>
-              <code>shift+return</code> : Format
+              <code>shift+return</code> : 格式化
             </li>
           </ul>
           <hr />
           <p>
-            <strong>Tip</strong>
+            <strong>提示</strong>
           </p>
-          <p>Run only a portion of a query by highlighting it first.</p>
+          <p>可以运行当前选中的语句</p>
           <hr />
           <ul className="nav nav-pills nav-justified">
             {this.renderNavLink(tableUrl, 'Link to Table')}
@@ -121,7 +121,7 @@ class QueryDetailsModal extends React.Component {
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={onHide}>Close</Button>
+          <Button onClick={onHide}>关闭</Button>
         </Modal.Footer>
       </Modal>
     )

@@ -32,7 +32,7 @@ class UserListRow extends React.Component {
   render() {
     const { user, currentUser } = this.props
     const signupDate = !user.signupDate ? (
-      <em>not signed up yet</em>
+      <em>还未注册</em>
     ) : (
       moment(user.signupDate).calendar()
     )

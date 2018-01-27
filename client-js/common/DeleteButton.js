@@ -11,7 +11,7 @@ class DeleteButton extends React.Component {
     const popoverClick = (
       <Popover id="popover-trigger-click" title="Are you sure?">
         <Button bsStyle="danger" onClick={onClick} className="w-100">
-          delete
+          删除
         </Button>
       </Popover>
     )

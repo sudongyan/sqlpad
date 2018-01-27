@@ -7,11 +7,13 @@ class QueryResultHeader extends React.Component {
   renderDownloadLinks() {
     const { cacheKey, config } = this.props
     const csvDownloadLink = `${config.baseUrl}/download-results/${cacheKey}.csv`
-    const xlsxDownloadLink = `${config.baseUrl}/download-results/${cacheKey}.xlsx`
+    const xlsxDownloadLink = `${
+      config.baseUrl
+    }/download-results/${cacheKey}.xlsx`
     if (config.allowCsvDownload) {
       return (
         <span>
-          <span className="gray">Download: </span>
+          <span className="gray">下载: </span>
           <a
             className="ml3"
             target="_blank"
@@ -43,7 +45,7 @@ class QueryResultHeader extends React.Component {
         >
           {isRunning ? (
             <span className="pl1 pr5">
-              <span className="gray">Query Run Time: </span>
+              <span className="gray">运行时长: </span>
               <span>
                 <SecondsTimer startTime={runQueryStartTime} /> sec.
               </span>
@@ -65,11 +67,11 @@ class QueryResultHeader extends React.Component {
         style={{ height: '30px' }}
       >
         <span className="pl1 pr5">
-          <span className="gray">Query Run Time: </span>
+          <span className="gray">运行时长: </span>
           {serverSec}
         </span>
         <span className="pr5">
-          <span className="gray">Rows: </span>
+          <span className="gray">行数: </span>
           {rowCount}
         </span>
         <span className="pr5">{this.renderDownloadLinks()}</span>

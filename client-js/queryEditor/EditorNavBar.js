@@ -30,7 +30,7 @@ class EditorNavBar extends React.Component {
 
     const validationState =
       showValidation && !query.name.length ? 'error' : null
-    const saveText = unsavedChanges ? 'Save*' : 'Save'
+    const saveText = unsavedChanges ? '保存*' : '保存'
     const cloneDisabled = !query._id
 
     return (
@@ -40,7 +40,7 @@ class EditorNavBar extends React.Component {
             <span className="glyphicon glyphicon-align-left" /> SQL
           </NavItem>
           <NavItem eventKey="vis">
-            <span className="glyphicon glyphicon-stats" /> Vis
+            <span className="glyphicon glyphicon-stats" /> 图表
           </NavItem>
         </Nav>
         <Nav>
@@ -50,10 +50,10 @@ class EditorNavBar extends React.Component {
             onClick={onCloneClick}
             disabled={cloneDisabled}
           >
-            Clone
+            复制
           </NavItem>
           <NavItem eventKey={2} href="#" onClick={onFormatClick}>
-            Format
+            格式化
           </NavItem>
           <NavItem
             style={{ minWidth: 68 }}
@@ -70,7 +70,7 @@ class EditorNavBar extends React.Component {
             onClick={onRunClick}
             disabled={isRunning}
           >
-            Run
+            运行
           </NavItem>
         </Nav>
         <Navbar.Form>
@@ -86,7 +86,7 @@ class EditorNavBar extends React.Component {
                 fontSize: '16px'
               }}
               type="text"
-              placeholder="Query name"
+              placeholder="请输入一个名称"
               onChange={this.onQueryNameChange}
               value={query.name}
             />

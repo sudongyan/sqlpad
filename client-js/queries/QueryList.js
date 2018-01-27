@@ -20,7 +20,7 @@ class QueryList extends React.Component {
     })
     return (
       <div className="pa2 w-40 flex flex-column">
-        <ControlLabel>Queries</ControlLabel>
+        <ControlLabel>查询列表</ControlLabel>
         <ListGroup className="overflow-y-auto">{QueryListRows}</ListGroup>
       </div>
     )

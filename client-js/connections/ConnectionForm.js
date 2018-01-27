@@ -259,7 +259,7 @@ class ConnectionForm extends React.Component {
               controlId="name"
               validationState={connection.name ? null : 'error'}
             >
-              <ControlLabel>Connection Name</ControlLabel>
+              <ControlLabel>名称</ControlLabel>
               <FormControl
                 type="text"
                 name="name"
@@ -271,7 +271,7 @@ class ConnectionForm extends React.Component {
               controlId="driver"
               validationState={connection.driver ? null : 'error'}
             >
-              <ControlLabel>Database Driver</ControlLabel>
+              <ControlLabel>数据库类型</ControlLabel>
               <FormControl
                 componentClass="select"
                 name="driver"
@@ -293,14 +293,14 @@ class ConnectionForm extends React.Component {
               onClick={saveConnection}
               disabled={isSaving}
             >
-              {isSaving ? 'Saving...' : 'Save'}
+              {isSaving ? '保存...' : '保存'}
             </Button>{' '}
             <Button
               style={{ width: 100 }}
               onClick={testConnection}
               disabled={isTesting}
             >
-              {isTesting ? 'Testing...' : 'Test'}
+              {isTesting ? '测试...' : '测试'}
             </Button>
           </Form>
         </Panel>

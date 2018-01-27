@@ -51,12 +51,12 @@ class QueryListSidebar extends React.Component {
       <div className="pa2 w-20">
         <Form>
           <FormGroup controlId="formControlsSelect">
-            <ControlLabel>Search</ControlLabel>
+            <ControlLabel>查找</ControlLabel>
             <FormControl type="text" onChange={this.onSearchChange} />
           </FormGroup>
           <br />
           <FormGroup controlId="formControlsSelect">
-            <ControlLabel>Tag</ControlLabel>
+            <ControlLabel>标签</ControlLabel>
             <FormControl componentClass="select" onChange={this.onTagChange}>
               <option value="">All</option>
               {tagSelectOptions}
@@ -64,7 +64,7 @@ class QueryListSidebar extends React.Component {
           </FormGroup>
           <br />
           <FormGroup controlId="formControlsSelect">
-            <ControlLabel>Connection</ControlLabel>
+            <ControlLabel>连接</ControlLabel>
             <FormControl
               componentClass="select"
               onChange={this.onConnectionChange}
@@ -75,7 +75,7 @@ class QueryListSidebar extends React.Component {
           </FormGroup>
           <br />
           <FormGroup controlId="formControlsSelect">
-            <ControlLabel>Created By</ControlLabel>
+            <ControlLabel>创建者</ControlLabel>
             <FormControl
               value={this.props.selectedCreatedBy}
               componentClass="select"
@@ -87,10 +87,10 @@ class QueryListSidebar extends React.Component {
           </FormGroup>
           <br />
           <FormGroup controlId="formControlsSelect">
-            <ControlLabel>Sort By</ControlLabel>
+            <ControlLabel>排序</ControlLabel>
             <FormControl componentClass="select" onChange={this.onSortByChange}>
-              <option value="modifiedDate">Modified Date</option>
-              <option value="name">Name</option>
+              <option value="modifiedDate">修改时间</option>
+              <option value="name">名称</option>
             </FormControl>
           </FormGroup>
         </Form>

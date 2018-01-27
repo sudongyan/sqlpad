@@ -27,7 +27,7 @@ class UserList extends React.Component {
     })
     return (
       <div style={styleUserList}>
-        <ControlLabel>Users</ControlLabel>
+        <ControlLabel>所有用户</ControlLabel>
         <ListGroup>{listRows}</ListGroup>
       </div>
     )

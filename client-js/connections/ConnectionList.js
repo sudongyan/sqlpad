@@ -34,9 +34,9 @@ class ConnectionList extends React.Component {
     })
     return (
       <div className="ConnectionList" style={connectionListStyle}>
-        <ControlLabel>Connections</ControlLabel>
+        <ControlLabel>连接</ControlLabel>
         <ListGroup className="ConnectionListContents">{listRows}</ListGroup>
-        <Button onClick={onNewConnectionClick}>New Connection</Button>
+        <Button onClick={onNewConnectionClick}>添加数据库连接</Button>
       </div>
     )
   }

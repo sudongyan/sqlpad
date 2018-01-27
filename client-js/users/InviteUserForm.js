@@ -65,17 +65,17 @@ class InviteUserForm extends React.Component {
   render() {
     return (
       <div style={inviteUserFormStyle}>
-        <ControlLabel>Invite User</ControlLabel>
+        <ControlLabel>验证用户</ControlLabel>
         <Panel>
           <Form>
             <p>
-              Users may only sign up if they have first been whitelisted. Once
-              whitelisted, invite them to continue the sign-up process on the{' '}
-              <a href={this.props.config.baseUrl + '/signup'}>signup page</a>.
+              加入白名单的用户长可以注册。 加入白名单后,
+              邀请用户前往这个页面进行注册{' '}
+              <a href={this.props.config.baseUrl + '/signup'}>注册页面</a>.
             </p>
             <p>
-              <strong>Admins</strong> can add and edit database connections, as
-              well as whitelist/invite users to join.
+              <strong>Admin用户</strong> 可以添加和修改数据库连拉,
+              以及邀请用户加入和添加白名单。
             </p>
             <hr />
             <FormGroup
@@ -108,7 +108,7 @@ class InviteUserForm extends React.Component {
               onClick={this.onInviteClick}
               disabled={this.state.isInviting}
             >
-              Whitelist User
+              加入白名单
             </Button>
           </Form>
         </Panel>

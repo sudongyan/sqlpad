@@ -88,21 +88,21 @@ class App extends React.Component {
             id="user-nav-dropdown"
           >
             <LinkContainer to="/connections">
-              <MenuItem eventKey={3.1}>Connections</MenuItem>
+              <MenuItem eventKey={3.1}>配置连接</MenuItem>
             </LinkContainer>
             <LinkContainer to="/users">
-              <MenuItem eventKey={3.2}>Users</MenuItem>
+              <MenuItem eventKey={3.2}>用户</MenuItem>
             </LinkContainer>
             <LinkContainer to="/config-values">
-              <MenuItem eventKey={3.3}>Configuration</MenuItem>
+              <MenuItem eventKey={3.3}>没置</MenuItem>
             </LinkContainer>
             <MenuItem divider />
             <MenuItem eventKey={3.4} onClick={this.openAboutModal}>
-              About SQLPad
+              关于
             </MenuItem>
             <MenuItem divider />
             <MenuItem eventKey={3.5} onClick={this.signout}>
-              Sign Out
+              退出
             </MenuItem>
           </NavDropdown>
         )
@@ -113,12 +113,8 @@ class App extends React.Component {
             title={this.props.currentUser.email.split('@')[0]}
             id="user-nav-dropdown"
           >
-            <MenuItem eventKey={3.4} onClick={this.openAboutModal}>
-              About SQLPad
-            </MenuItem>
-            <MenuItem divider />
             <MenuItem eventKey={3.5} onClick={this.signout}>
-              Sign Out
+              退出
             </MenuItem>
           </NavDropdown>
         )
@@ -129,10 +125,10 @@ class App extends React.Component {
         <Navbar inverse fluid fixedTop>
           <Nav>
             <LinkContainer exact to="/queries">
-              <NavItem eventKey={1}>Queries</NavItem>
+              <NavItem eventKey={1}>首页</NavItem>
             </LinkContainer>
             <LinkContainer exact to="/queries/new">
-              <NavItem eventKey={2}>New Query</NavItem>
+              <NavItem eventKey={2}>新建查询</NavItem>
             </LinkContainer>
           </Nav>
           <Nav pullRight>
@@ -145,7 +141,7 @@ class App extends React.Component {
         </div>
         <Modal show={this.state.showAboutModal} onHide={this.closeAboutModal}>
           <Modal.Header closeButton>
-            <Modal.Title>About SQLPad</Modal.Title>
+            <Modal.Title>关于</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <p>
@@ -154,11 +150,11 @@ class App extends React.Component {
             <p>
               <strong>Project Page</strong>:{' '}
               <a
-                href="http://rickbergfalk.github.io/sqlpad/"
+                href="https://github.com/sudongyan/sqlpad"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                http://rickbergfalk.github.io/sqlpad{' '}
+                https://github.com/sudongyan/sqlpad{' '}
                 <span
                   style={{ marginLeft: 4 }}
                   className="glyphicon glyphicon-new-window"

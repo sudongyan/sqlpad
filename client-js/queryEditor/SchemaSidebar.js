@@ -220,6 +220,7 @@ class SchemaInfoTableItem extends React.Component {
           <SchemaInfoColumnItem
             {...this.props}
             column_name={column.column_name}
+            column_comment={column.column_comment}
             data_type={column.data_type}
             key={column.column_name}
             schema={schema}
@@ -234,6 +235,13 @@ class SchemaInfoTableItem extends React.Component {
       const type = columns[0].table_type
       if (type.toLowerCase().split('')[0] === 'v') {
         return <span className="silver"> (view)</span>
+      }
+    }
+
+    const tableComment = () => {
+      const comment = columns[0].table_comment
+      if (comment) {
+        return <span className="silver"> ({comment})</span>
       }
     }
 
@@ -263,9 +271,9 @@ class SchemaInfoTableItem extends React.Component {
           onMouseOut={this.handleMouseOut}
           onClick={this.handleClick}
           className="dib"
-          style={{ minWidth: '230px' }}
+          style={{ minWidth: '230px', whiteSpace: 'nowrap' }}
         >
-          {table} {viewType()}
+          {table} {viewType()} {tableComment()}
           {getCopyToClipboard()}
         </a>
         <ul className="pl3">{columnJsx}</ul>
@@ -306,7 +314,14 @@ class SchemaInfoColumnItem extends React.Component {
 
   render() {
     const { copyButtonText, showCopyButton } = this.state
-    const { config, column_name, data_type, schema, table } = this.props
+    const {
+      config,
+      column_name,
+      data_type,
+      schema,
+      table,
+      column_comment
+    } = this.props
     const copyButtonClassName = showCopyButton
       ? 'right-2 pointer absolute bg-black hover-bg-hot-pink label label-info'
       : 'right-2 pointer absolute bg-black hover-bg-hot-pink label label-info dn'
@@ -328,16 +343,23 @@ class SchemaInfoColumnItem extends React.Component {
         )
       }
     }
+    const columnComment = () => {
+      const comment = column_comment
+      if (comment) {
+        return <span className="silver"> ({comment})</span>
+      }
+    }
     return (
       <li className="list">
         <span
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOut}
           className="dib"
-          style={{ minWidth: '230px' }}
+          style={{ minWidth: '230px', whiteSpace: 'nowrap' }}
         >
           {column_name}
           <span className="silver"> ({data_type})</span>
+          {columnComment()}
           {getCopyToClipboard()}
         </span>
       </li>

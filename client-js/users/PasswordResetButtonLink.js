@@ -12,15 +12,13 @@ const PasswordResetButtonLink = props => {
     return (
       <span style={style}>
         <Button onClick={props.removePasswordResetLink}>remove</Button>{' '}
-        <a href={'/password-reset/' + props.passwordResetId}>
-          Password Reset Link
-        </a>
+        <a href={'/password-reset/' + props.passwordResetId}>重设密码</a>
       </span>
     )
   }
   return (
     <Button style={style} onClick={props.generatePasswordResetLink}>
-      Generate Password Reset Link
+      获取重设密码的链接
     </Button>
   )
 }
