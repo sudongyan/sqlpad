@@ -43,7 +43,7 @@ class ForgotPassword extends React.Component {
             required
           />
           <button className="btn btn-primary btn-block mt3" type="submit">
-            Reset Password
+            重设密码
           </button>
         </form>
       </div>
