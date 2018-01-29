@@ -13,7 +13,7 @@ class SignIn extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'SQLPad - Sign In'
+    document.title = 'SQLPad - 登录'
   }
 
   onEmailChange = e => {
@@ -45,7 +45,7 @@ class SignIn extends React.Component {
             name="email"
             type="email"
             className="form-control mt2"
-            placeholder="Email address"
+            placeholder="Email address by '@100tail.com'"
             onChange={this.onEmailChange}
             required
           />
@@ -66,7 +66,7 @@ class SignIn extends React.Component {
           </button>
         </form>
         <div className="tc mt3">
-          <Link to="/signup">登录</Link>
+          <Link to="/signup">注册</Link>
           {smtpConfigured ? (
             <Link className="ml5" to="/forgot-password">
               忘记密码
