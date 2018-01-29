@@ -27,7 +27,7 @@ class SignIn extends React.Component {
   signIn = e => {
     e.preventDefault()
     fetchJson('POST', '/api/signin', this.state).then(json => {
-      if (json.error) return Alert.error('Username or password incorrect')
+      if (json.error) return Alert.error('用户名或密码错误')
       this.setState({ redirect: true })
     })
   }
@@ -62,14 +62,14 @@ class SignIn extends React.Component {
             className="btn btn-primary btn-block mt4"
             type="submit"
           >
-            Sign in
+            登录
           </button>
         </form>
         <div className="tc mt3">
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/signup">登录</Link>
           {smtpConfigured ? (
             <Link className="ml5" to="/forgot-password">
-              Forgot Password
+              忘记密码
             </Link>
           ) : null}
         </div>

@@ -5,8 +5,8 @@ export default props => {
   document.title = 'SQLPad - Password Reset'
   return (
     <FullscreenMessage>
-      <p>Password reset requested.</p>
-      <p>An email has been sent with further instruction.</p>
+      <p>重设密码请求已发送</p>
+      <p>请查收邮件或联系管理员</p>
     </FullscreenMessage>
   )
 }

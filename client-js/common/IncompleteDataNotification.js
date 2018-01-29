@@ -20,11 +20,11 @@ export default class extends React.Component {
       return (
         <span className="red pointer mr2" onClick={this.toggle}>
           <Glyphicon glyph="warning-sign" ref="incompleteDataTarget" />{' '}
-          Incomplete
+          未返回全部结果
           <Overlay {...sharedProps} placement="bottom">
             <Popover id="incomplete-data-popover" title={'Incomplete Data'}>
-              Return fewer rows or increase query result max rows in
-              configuration.
+              你可以在请求中设定返回更少的行，
+              或在系统设置中调整允许返回最大行数的值。
             </Popover>
           </Overlay>
         </span>

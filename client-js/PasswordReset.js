@@ -38,13 +38,12 @@ class PasswordReset extends React.Component {
 
   componentDidMount() {
     document.title = 'SQLPad - Password Reset'
-    fetchJson(
-      'GET',
-      '/api/password-reset/' + this.props.passwordResetId
-    ).then(json => {
-      if (json.error) return Alert.error(json.error)
-      if (!json.passwordResetId) this.setState({ notFound: true })
-    })
+    fetchJson('GET', '/api/password-reset/' + this.props.passwordResetId).then(
+      json => {
+        if (json.error) return Alert.error(json.error)
+        if (!json.passwordResetId) this.setState({ notFound: true })
+      }
+    )
   }
 
   render() {
@@ -56,7 +55,7 @@ class PasswordReset extends React.Component {
       return (
         <div className="pt5 measure center" style={{ width: '300px' }}>
           <form onSubmit={this.resetPassword}>
-            <h1 className="f2">Password reset not found</h1>
+            <h1 className="f2">"重设密码" not found</h1>
           </form>
         </div>
       )
@@ -90,7 +89,7 @@ class PasswordReset extends React.Component {
             required
           />
           <button className="btn btn-primary btn-block mt3" type="submit">
-            Reset Password
+            重设密码
           </button>
         </form>
       </div>

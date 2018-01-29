@@ -44,12 +44,10 @@ class SignUp extends React.Component {
       if (this.props.adminRegistrationOpen || true) {
         return (
           <div className="mb4">
-            <h2 className="f3 tc">Admin Registration is Open</h2>
+            <h2 className="f3 tc">已启用管理员注册</h2>
             <p>
-              Welcome to SQLPad! Since there are no admins currently in the
-              system, registration is open to anyone. By signing up, you will be
-              granted admin rights, and the system will be locked down. Only
-              people explicitly invited & whitelisted will be able to join.
+              欢迎使用 SQLPad! 系统中目前还没有管理员，你可以注册成为管理员。
+              在你获得管理员权限后，只有被管理员加入白名单的用户才可以注册使用本系统。
             </p>
           </div>
         )
@@ -85,7 +83,7 @@ class SignUp extends React.Component {
             required
           />
           <button className="btn btn-primary btn-block mt3" type="submit">
-            Sign up
+            注册
           </button>
         </form>
       </div>
